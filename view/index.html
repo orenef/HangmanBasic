@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hangman - Exercise 1</title>
+    <link rel="stylesheet" type="text/css" id="theme_css" href="../css/theme-default.css">
+    <link rel="stylesheet" type="text/css" href="../css/mycss.css">
+    <link rel="stylesheet" type="text/css" href="../css/dropdown.css">
+
+    <script src="../controller/script.js"></script>
+
+    <script>
+    var hangmanGame = Hangman();
+    </script>
+
+
+</head>
+<body>
+<div class="menu-top">
+    <button onclick="hangmanGame.startGame()" class="dropbtn">Click To Start Game
+    </button>
+
+    <button onclick="hangmanGame.toggleStylesDropdownVisibility()" class="dropbtn">Change view mode
+    </button>
+    <div id="Dropdown" class="dropdown-content">
+        <a href="#" onmouseover="hangmanGame.changeThemeToBlackAndWhite()" onclick="hangmanGame.changeThemeToBlackAndWhite()">B&W</a>
+        <a href="#" onmouseover="hangmanGame.changeThemeToPinkish()" onclick="hangmanGame.changeThemeToPinkish()">Pinkish</a>
+        <a href="#" onmouseover="hangmanGame.changeThemeToDefualt()" onclick="hangmanGame.changeThemeToDefualt()">Default</a>
+    </div>
+</div>
+
+<div id="mainScreen" class="mainScreen mainScreen-color-theme">
+    <div id="hangman-canvas">
+        <canvas id="myCanvas" class="my-canvas my-canvas-color-theme">
+        </canvas>
+    </div>
+    <div id="playword" class="playword playword-color-theme">
+    </div>
+    <div id="guess-zone" class="guess-zone">
+        <div class="guess-zone-container">
+            <label class="guesszone-label">New letter:
+            </label>
+            <input id="guess" type="text" size="1" maxlength="1" class="guessbox guessbox-color-theme" placeholder="_">
+            <input type="submit" class="submitbutton submitbutton-color-theme" id="submitL" value="submit"
+                   onclick="hangmanGame.check(document.getElementById('guess').value)">
+        </div>
+    </div>
+    <div id="alert-zone" class="alert-zone alert-zone-color-theme"></div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+.mainScreen {
+	width:100%;
+	height:100%;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*display: flex;*/
+
+}
+
+
+.my-canvas {
+	width:700px;
+	height:500px;
+    margin: 20px 50px 0 50px;
+}
+
+.playword {
+	width:700px;
+    margin: 30px 50px 0 50px;
+    height:100px;
+    font-size: 60px;
+    font-style: italic;
+    text-align: center;
+ }
+
+
+.guess-word {
+    text-decoration : underline;
+    margin : 10px;
+}
+.guess-zone {
+	width:700px;
+    margin: 20px 50px 0 50px;
+    display: flex;
+    /*-webkit-flex: 1;  !* Safari 6.1+ *!*/
+    /*-ms-flex: 1;  !* IE 10 *!*/
+    /*flex: 1;*/
+}
+
+.guess-zone-container{
+    display: flex;
+    width: 700px;
+    justify-content: space-between;
+}
+
+.guesszone-label {
+	/*width:250px;*/
+    /*margin: 0 50px 0 00px;*/
+    height:50px;
+    font-size: 40px;
+    /*float: left;*/
+
+}
+
+.alert-zone {
+	font-size: 50px;
+    text-align: center;
+    margin: 10px 50px 0 0;
+}
+
+
+.guessbox{
+    text-decoration:underline;text-align:center;height:50px; width:50px;font-size:40px;
+}
+
+.submitbutton {
+
+    height:50px;
+    width: 250px;
+    /*margin-left: 50px;*/
+   	/*float: right;*/
+   	font-size:40px;
+}
+
+.showme {
+	visibility:visible;
+}
+.hideme {
+		/*visibility:hidden;*/
+		 display: none;
+}
+
+.blink {
+  animation: blink-animation 1s steps(5, start) infinite;
+  -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
